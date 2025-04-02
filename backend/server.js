@@ -1,15 +1,19 @@
 const express = require('express');
 const cors = require('cors');
-
 const app = express();
+const port = 5000;
+
+const therapistRoutes = require('./routes/therapists');
+const clientRoutes = require('./routes/clients');
+const sessionRoutes = require('./routes/sessions');
+
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('API is working!');
-});
+app.use('/api/therapists', therapistRoutes);
+app.use('/api/clients', clientRoutes);
+app.use('/api/sessions', sessionRoutes);
 
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
