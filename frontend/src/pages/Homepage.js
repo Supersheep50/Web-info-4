@@ -1,15 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function HomePage() {
+function Homepage() {
   return (
     <div>
-      <h1>Welcome to the Therapist Client Management System</h1>
-      <Link to="/therapists"><button>Therapists</button></Link>
-      <Link to="/clients"><button>Clients</button></Link>
-      <Link to="/sessions"><button>Sessions</button></Link>
+      <h1>Home</h1>
+      
     </div>
   );
 }
 
-export default HomePage;
+export default Homepage;
