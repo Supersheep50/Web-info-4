@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const clientsController = require('../controllers/clientsController');
 
-router.get('/', (req, res) => {
-  res.send('Clients route placeholder');
-});
+router.get('/', clientsController.getAllClients);
 
 module.exports = router;
