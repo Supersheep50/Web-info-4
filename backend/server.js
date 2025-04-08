@@ -26,6 +26,9 @@ app.use((req, res, next) => {
 const therapistRoutes = require('./routes/therapists');
 app.use('/api/therapists', therapistRoutes);
 
+const clientRoutes = require('./routes/clients');
+app.use('/api/clients', clientRoutes);
+
 app.listen(port, () => {
   console.log(`✅ Server running at http://localhost:${port}`);
 });
