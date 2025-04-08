@@ -91,9 +91,9 @@ return (
       <div className="row g-2">
         
         <div className="col"><input name="name" placeholder="Name" className="form-control" required /></div>
-        <div className="col"><input name="email" placeholder="Email" className="form-control" required /></div>
         <div className="col"><input name="phone" placeholder="Phone" className="form-control" required /></div>
-        
+        <div className="col"><input name="email" placeholder="Email" className="form-control" required /></div>
+         
         <div className="col">
           <select name="regularity" className="form-control" required>
             <option value="">Select</option>
@@ -109,8 +109,8 @@ return (
       <thead>
         <tr>
           <th>Name</th>
-          <th>Email</th>
           <th>Phone Number</th>
+          <th>Email</th>
           <th>Regularity</th>
           <th></th>
 
