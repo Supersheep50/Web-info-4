@@ -8,7 +8,7 @@ exports.getAllClients = (req, res) => {
 
     db.query(query, (err, results) => {
         if (err) {
-            console.error('❌ Error fetching clients:', err);
+            console.error(' Error fetching clients:', err);
             return res.status(500).json({ error: 'Failed to retrieve clients' });
         }
         res.json(results);

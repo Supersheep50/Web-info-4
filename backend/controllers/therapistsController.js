@@ -1,8 +1,8 @@
-console.log('✅ therapistsController loaded');
+
 
 const db = require('../db');
 
-// ✅ GET all therapists
+//  GET all therapists
 exports.getAllTherapists = (req, res) => {
   console.log('➡️  getAllTherapists triggered');
 
@@ -10,14 +10,14 @@ exports.getAllTherapists = (req, res) => {
 
   db.query(query, (err, results) => {
     if (err) {
-      console.error('❌ Error fetching therapists:', err);
+      console.error(' Error fetching therapists:', err);
       return res.status(500).json({ error: 'Failed to retrieve therapists' });
     }
     res.json(results);
   });
 };
 
-// ✅ DELETE therapist by ID
+//  DELETE therapist by ID
 exports.deleteTherapist = (req, res) => {
   const id = req.params.id;
   const query = 'DELETE FROM therapists WHERE id = ?';
